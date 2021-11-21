@@ -1,0 +1,148 @@
+object TableForm: TTableForm
+  Left = 594
+  Height = 165
+  Top = 248
+  Width = 394
+  Caption = 'DTR Table'
+  ClientHeight = 165
+  ClientWidth = 394
+  OnResize = OnResize
+  Position = poDesktopCenter
+  LCLVersion = '2.0.12.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 42
+    Top = 123
+    Width = 394
+    Align = alBottom
+    ClientHeight = 42
+    ClientWidth = 394
+    ParentFont = False
+    TabOrder = 0
+    Visible = False
+    object BitBtn1: TBitBtn
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 177
+      Height = 30
+      Top = 5
+      Width = 96
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 120
+      Default = True
+      DefaultCaption = True
+      Kind = bkOK
+      ModalResult = 1
+      ParentFont = False
+      TabOrder = 0
+    end
+    object BitBtn2: TBitBtn
+      AnchorSideLeft.Control = Panel1
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 282
+      Height = 30
+      Top = 5
+      Width = 96
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 15
+      Cancel = True
+      DefaultCaption = True
+      Kind = bkCancel
+      ModalResult = 2
+      ParentFont = False
+      TabOrder = 1
+    end
+  end
+  object StringGrid1: TStringGrid
+    Left = 38
+    Height = 100
+    Top = 0
+    Width = 356
+    Align = alClient
+    ColCount = 6
+    Columns = <    
+      item
+        Alignment = taRightJustify
+        Title.Alignment = taRightJustify
+        Title.Font.Style = [fsBold]
+        Title.Caption = 'Index'
+      end    
+      item
+        Alignment = taRightJustify
+        MinSize = 8
+        MaxSize = 160
+        Title.Alignment = taRightJustify
+        Title.Font.Style = [fsBold]
+        Title.Caption = 'TWT [ms]'
+      end    
+      item
+        Alignment = taRightJustify
+        MinSize = 8
+        MaxSize = 160
+        Title.Alignment = taRightJustify
+        Title.Font.Style = [fsBold]
+        Title.Caption = 'TVDSRD [m]'
+      end    
+      item
+        Alignment = taRightJustify
+        MinSize = 8
+        MaxSize = 160
+        Title.Alignment = taRightJustify
+        Title.Font.Style = [fsBold]
+        Title.Caption = 'VAVG [m/s]'
+      end    
+      item
+        Alignment = taRightJustify
+        MinSize = 8
+        MaxSize = 160
+        Title.Alignment = taRightJustify
+        Title.Font.Style = [fsBold]
+        Title.Caption = 'VRMS [m/s]'
+      end    
+      item
+        Alignment = taRightJustify
+        MinSize = 8
+        MaxSize = 160
+        Title.Alignment = taRightJustify
+        Title.Font.Style = [fsBold]
+        Title.Caption = 'VINT [m/s]'
+      end>
+    FixedCols = 0
+    Flat = True
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRowSelect, goSmoothScroll, goScrollKeepVisible]
+    ParentFont = False
+    ScrollBars = ssVertical
+    TabOrder = 1
+    Cells = (
+      1
+      1
+      0
+      'TWT'
+    )
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 100
+    Top = 0
+    Width = 38
+    Align = alLeft
+    ParentFont = False
+    TabOrder = 2
+    Visible = False
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 100
+    Width = 394
+    Panels = <>
+    ParentFont = False
+  end
+end

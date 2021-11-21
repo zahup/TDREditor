@@ -1,0 +1,158 @@
+object SaveForm: TSaveForm
+  Left = 453
+  Height = 368
+  Top = 402
+  Width = 307
+  BorderStyle = bsDialog
+  Caption = 'Export DTR Data'
+  ClientHeight = 368
+  ClientWidth = 307
+  FormStyle = fsStayOnTop
+  Position = poScreenCenter
+  LCLVersion = '2.0.10.0'
+  object GroupBox1: TGroupBox
+    Left = 8
+    Height = 120
+    Top = 8
+    Width = 289
+    Caption = 'Add Header'
+    ClientHeight = 100
+    ClientWidth = 285
+    ParentFont = False
+    TabOrder = 0
+    object Header: TMemo
+      Left = 8
+      Height = 92
+      Top = 0
+      Width = 270
+      Lines.Strings = (
+        '#Col1: TVDSRD'
+        '#Col2: TWT'
+      )
+      ParentFont = False
+      TabOrder = 0
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 8
+    Height = 105
+    Top = 128
+    Width = 289
+    Caption = 'Select Data to Export'
+    ClientHeight = 85
+    ClientWidth = 285
+    ParentFont = False
+    TabOrder = 1
+    object AvDTRData: TListBox
+      Left = 8
+      Height = 80
+      Top = 0
+      Width = 100
+      Items.Strings = (
+        'TVDSRD'
+        'TWT'
+        'VAVG'
+        'VRMS'
+        'VINT'
+      )
+      ItemHeight = 15
+      OnDblClick = SelectData
+      ParentFont = False
+      TabOrder = 0
+    end
+    object SelDTRData: TListBox
+      Left = 168
+      Height = 80
+      Top = 0
+      Width = 108
+      ItemHeight = 0
+      OnDblClick = RemoveData
+      ParentFont = False
+      TabOrder = 1
+    end
+    object StaticText1: TStaticText
+      Left = 115
+      Height = 64
+      Top = 8
+      Width = 48
+      Caption = 'DblClick'#13#10'To '#13#10'Select '#13#10'Item'
+      TabOrder = 2
+    end
+  end
+  object GroupBox3: TGroupBox
+    Left = 8
+    Height = 86
+    Top = 240
+    Width = 289
+    Caption = 'Format text'
+    ClientHeight = 66
+    ClientWidth = 285
+    ParentFont = False
+    TabOrder = 2
+    object LabeledEdit1: TLabeledEdit
+      Left = 58
+      Height = 23
+      Top = 8
+      Width = 80
+      Alignment = taRightJustify
+      EditLabel.Height = 15
+      EditLabel.Width = 48
+      EditLabel.Caption = 'Precision'
+      EditLabel.ParentColor = False
+      EditLabel.ParentFont = False
+      LabelPosition = lpLeft
+      ParentFont = False
+      TabOrder = 0
+      Text = '6'
+    end
+    object LabeledEdit2: TLabeledEdit
+      Left = 196
+      Height = 23
+      Top = 8
+      Width = 80
+      Alignment = taRightJustify
+      EditLabel.Height = 15
+      EditLabel.Width = 30
+      EditLabel.Caption = 'Digits'
+      EditLabel.ParentColor = False
+      EditLabel.ParentFont = False
+      LabelPosition = lpLeft
+      ParentFont = False
+      TabOrder = 1
+      Text = '2'
+    end
+    object LabeledEdit3: TLabeledEdit
+      Left = 196
+      Height = 23
+      Top = 38
+      Width = 80
+      Alignment = taRightJustify
+      EditLabel.Height = 15
+      EditLabel.Width = 77
+      EditLabel.Caption = 'Record Length'
+      EditLabel.ParentColor = False
+      EditLabel.ParentFont = False
+      LabelPosition = lpLeft
+      ParentFont = False
+      TabOrder = 2
+      Text = '14'
+    end
+  end
+  object BitBtn1: TBitBtn
+    Left = 222
+    Height = 30
+    Top = 333
+    Width = 75
+    Default = True
+    DefaultCaption = True
+    Kind = bkOK
+    ModalResult = 1
+    OnClick = BitBtn1Click
+    ParentFont = False
+    TabOrder = 3
+  end
+  object SaveDialog1: TSaveDialog
+    Left = 70
+    Top = 326
+  end
+end
